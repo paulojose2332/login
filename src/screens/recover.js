@@ -7,6 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Help from '@material-ui/icons/HelpOutline';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -45,9 +46,8 @@ const styles = theme => ({
 });
 
 
-class Login extends React.Component {
+class Recover extends React.Component {
 
-  onButtonClick
   
   render () {
     const { classes } = this.props;
@@ -56,19 +56,15 @@ class Login extends React.Component {
         <CssBaseline />
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
-            <AccountCircle style={{ fontSize: 40 }} />
+            <Help style={{ fontSize: 40 }} />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Login
+            Recuperar Senha
           </Typography>
           <form className={classes.form}>
             <FormControl margin="normal"  fullWidth>
               <InputLabel htmlFor="email">Email</InputLabel>
               <Input id="email" name="email" autoComplete="email" autoFocus />
-            </FormControl>
-            <FormControl margin="normal"  fullWidth>
-              <InputLabel htmlFor="password">Senha</InputLabel>
-              <Input name="password" type="password" id="password" autoComplete="current-password" />
             </FormControl>
             <Button
               type="submit"
@@ -77,9 +73,9 @@ class Login extends React.Component {
               color="primary"
               className={classes.submit}
             >
-              Login
+              Enviar para email
             </Button>
-            <Link to="cadastro">
+            <Link to="/">
             <Button
               type="submit"
               fullWidth
@@ -88,7 +84,7 @@ class Login extends React.Component {
               className={classes.submit}
              
             >
-              Cadastro
+              Cancelar
             </Button>
             </Link>
           </form>
@@ -99,8 +95,8 @@ class Login extends React.Component {
   };
 }
 
-Login.propTypes = {
+Recover.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Login);
+export default withStyles(styles)(Recover);

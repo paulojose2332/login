@@ -1,8 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Login from './login';
-import Cadastro from './cadastro';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import Screen from "./screens/index";
 
 //class App extends React.Component {
 //    render() {
@@ -12,13 +10,5 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 //    }
 //}
 
-
-ReactDOM.render(
-    <BrowserRouter>
-        <Switch>
-            <Route path="/" exact={true} component={Login} />
-            <Route path="/cadastro" component={Cadastro} />
-        </Switch>
-    </ BrowserRouter>,
-    document.querySelector('#root')
-);
+// <Route path="/users" component={Users} />
+ReactDOM.render(<Screen />, document.querySelector("#root"));
